@@ -69,6 +69,16 @@
       <h2 class="border-bottom text-center font-weight-bold" style="font-weight:bold">
         Diskon Spesial Pa edi
       </h2>
+      <div class="row">
+        <div class="col container bg-danger ">
+          <img src="assets/img/indomie goreng.png" class="img-fluid p-5" >
+          
+        </div>
+        <div class="col">
+          <h4>Indomie Mi goreng <br> Rasa Rendang</h4>
+          <h2>Rp. 3.000 Rp. 2.500</h2>
+        </div>
+      </div>
   
     </div>
   </div>
