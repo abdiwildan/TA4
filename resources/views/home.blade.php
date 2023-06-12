@@ -28,7 +28,7 @@
       @endforeach --}}
       <div class="card-group text-center">
         <div class="card1">
-          <a href="/kategori">
+          <a href="produk">
             <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
             <div class="container1">
               <h5><b>Sembako</b></h5> 
@@ -85,13 +85,13 @@
         <div class="card1">
           <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
           <div class="container1">
-            <h4><b>John Doe</b></h4> 
+            <h4><b>Sembako</b></h4> 
           </div>
         </div>
         <div class="card1">
           <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
           <div class="container1">
-            <h4><b>John Doe</b></h4> 
+            <h4><b>Sembako</b></h4> 
           </div>
         </div>
       </div>
@@ -109,13 +109,13 @@
         <div class="card1">
           <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
           <div class="container1 ">
-            <h4 class=""><b>John Doe</b></h4> 
+            <h4 class=""><b>Sembako</b></h4> 
           </div>
         </div>
         <div class="card1">
           <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
           <div class="container1">
-            <h4><b>John Doe</b></h4> 
+            <h4><b>Sembako</b></h4> 
           </div>
         </div>
       </div>
