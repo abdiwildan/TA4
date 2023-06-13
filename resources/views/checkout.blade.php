@@ -4,7 +4,29 @@
     <div class="cart-wrap">
         <div class="cartcss">
             <div class="cartheading py-3">
-                <h3>Keranjang</h3>
+                <h3>Pembayaran</h3>
+            </div>
+            <div class="container bg-white mb-2 ">
+                <div class="row ">
+                    <div class="col">
+                        <div class="border-bottom p-auto">
+                            <h4>Alamat Pengiriman</h4>
+                        </div>
+                        <div class="border-bottom">
+                            <p>Nama Supplier</p>
+                            <p>08000001233</p>
+                            <p>Jl. Nama Jalan Nama blokkk</p>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                pilih Alamat
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
             </div>
             <div class="cartcontent">
                 <div class="cartleft">
@@ -57,7 +79,7 @@
                                         </div>
                                     </div>
                                     <div class="text-center"> 
-                                        <a href="/checkout" class="btn btn-primary rounded-pill mx-4">Beli</a>
+                                        <a href="" class="btn btn-primary rounded-pill mx-4">Bayar</a>
                                     </div>
                             </section>
                         </div>

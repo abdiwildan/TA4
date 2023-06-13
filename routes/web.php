@@ -57,3 +57,9 @@ Route::get('/home', function () {
         "title" => "Home"
     ]);
 });
+
+Route::get('/checkout', function () {
+    return view('checkout',[
+        "title" => "CheckOut"
+    ]);
+});

@@ -64,22 +64,37 @@
   </Div>
 
   <!-- Diskon  -->
-  <div class="cssCategory">
-    <div class="cssCategory2 cssDiskon">
-      <h2 class="border-bottom text-center font-weight-bold" style="font-weight:bold">
-        Diskon Spesial Pa edi
+  <div class="container-fluid py-5 mx-auto">
+    <div class="container">
+      <div class="text-center mb-5 border-bottom border-3 border-dark  display-4" >
+        <h2>
+        <b> Diskon Spesial Pa Edi </b>
       </h2>
-      <div class="row">
-        <div class="col container bg-danger ">
+      </div>
+      <div class="owl-carousel diskon-carousel position-relative" style="padding: 0 45px 45px 45px;">
+        <div class="row">
+        <div class="col container">
           <img src="assets/img/indomie goreng.png" class="img-fluid p-5" >
-          
         </div>
         <div class="col">
-          <h4>Indomie Mi goreng <br> Rasa Rendang</h4>
-          <h2>Rp. 3.000 Rp. 2.500</h2>
+          <h4> <b>Indomie Mi goreng <br> Rasa Rendang</b></h4>
+          <h2 class="display-4  mb-0">
+            <small class="align-top fw-normal"
+                style="font-size: 18px; line-height: 40px;">Rp.</small> <span
+                style="text-decoration: line-through red;"> 130.000</span><small
+                class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/
+                Dus</small><br>
+            <small class="align-top fw-normal"
+                style="font-size: 18px; line-height: 40px;">Rp.</small>99.000<small
+                class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/
+                Dus</small>
+          </h2>
+          <div class="text-center py-5"> 
+              <a href="" class="btn btn-primary rounded-pill px-5 ">Beli</a>
+          </div>
         </div>
       </div>
-  
+      </div>
     </div>
   </div>
       

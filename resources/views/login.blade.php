@@ -23,7 +23,7 @@
            		   </div>
            		   <div class="input-box"> 
 					<span class="details" style="opacity:0"> Username</span>
-					<input type="text" placeholder="User" required>
+					<input type="text" placeholder="Username" required>
 					</div>
            		</div>
 				<div class="input-div one">
