@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/img/icon tokopaedi.svg">
 </head>
 <body>
 	<img class="wave" src="assets/img/image.png">
@@ -16,13 +17,12 @@
 		<div class="login-content">
 			<form action="index.html">
 				<img src="assets/img/icon tokopaedi.svg">
-				<h2 class="title">Welcome</h2>
+				<h2 class="title"> Please Login </h2>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="input-box"> 
-					<span class="details" style="opacity:0"> Username</span>
 					<input type="text" placeholder="Username" required>
 					</div>
            		</div>
@@ -31,13 +31,12 @@
 						<i class="fas fa-lock"></i>
 					</div>
 					<div class="input-box"> 
-				  <span class="details" style="opacity:0"> Username</span>
 				  <input type="password" placeholder="Password" required>
 				  </div>
 				 </div>
             	<a href="forgotpass" id="a">Forgot Password?</a>
             	<a href="/home" class="btn">login</a>
-            	<a href="/signup" id="btn">Belum Punya Akun?</a>
+            	<a href="/register" id="btn">Belum Punya Akun?</a>
             </form>
         </div>
     </div>

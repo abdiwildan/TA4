@@ -7,12 +7,12 @@
             Kategori
           </h2>
           <div class="card-group text-center">
-            @foreach ($category as $categories)
+            @foreach ($produk as $categories)
             <div class="card1">
-              <img src="assets/img/{{ $categories["img"] }}" style="width:100%">
+              <img src="assets/img/{{ $categories->img }}" style="width:100%">
               <div class="container1">
-                <h5><b>{{ $categories["nama_produk"] }}</b></h5> 
-                <p>{{ $categories["harga"] }}</p>
+                <h5><b>{{ $categories->nama_produk }}</b></h5> 
+                <p>{{ $categories->harga }}</p>
               </div>
             </div>
             @endforeach

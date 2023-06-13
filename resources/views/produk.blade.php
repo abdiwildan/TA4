@@ -1,3 +1,4 @@
+
 @extends('layout.frontend')
 @section('content')
 <main>
@@ -7,12 +8,12 @@
             Kategori
           </h2>
           <div class="card-group text-center">
-            @foreach ($category as $categories)
+            @foreach ($produk as $pro)
             <div class="card1">
-              <img src="assets/img/{{ $categories["img"] }}" style="width:100%">
+              <img src="assets/img/{{ $pro->img }}" style="width:100%">
               <div class="container1">
-                <h5><b>{{ $categories["nama_produk"] }}</b></h5> 
-                <p>{{ $categories["harga"] }}</p>
+                <h5><b>{{ $pro->nama_produk }}</b></h5> 
+                <p>{{ $pro->harga }}</p>
               </div>
             </div>
             @endforeach

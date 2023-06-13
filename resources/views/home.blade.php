@@ -23,43 +23,19 @@
       <h2 class="border-bottom text-center font-weight-bold" style="font-weight:bold">
         Kategori
       </h2>
-      {{-- @foreach ($collection as $item)
-          
-      @endforeach --}}
+
       <div class="card-group text-center">
+
+        @foreach ($category as $categories)
         <div class="card1">
-          <a href="produk">
-            <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
+          <a href="produk/{{ $categories->slug }}">
+            <img src="assets/img/{{ $categories->img }}" alt="Avatar" style="width:100%">
             <div class="container1">
-              <h5><b>Sembako</b></h5> 
+              <h5><b>{{ $categories->nama_kategori }}</b></h5> 
             </div>
           </a>
-
         </div>
-        <div class="card1">
-          <img src="assets/img/kategori2.png" alt="Avatar" style="width:100%">
-          <div class="container1">
-            <h5><b>Makanan / Minuman</b></h5> 
-          </div>
-        </div>
-        <div class="card1">
-          <img src="assets/img/kategori3.png" alt="Avatar" style="width:100%">
-          <div class="container1">
-            <h5><b>Perlengkapan bayi</b></h5> 
-          </div>
-        </div>
-        <div class="card1">
-          <img src="assets/img/kategori4.png" alt="Avatar" style="width:100%">
-          <div class="container1">
-            <h5><b>Fashion</b></h5> 
-          </div>
-        </div>
-        <div class="card1">
-          <img src="assets/img/kategori5.png" alt="Avatar" style="width:100%">
-          <div class="container1">
-            <h5><b>Perlengkapan Rumah tangga</b></h5> 
-          </div>
-        </div>
+        @endforeach
       </div>
   </Div>
 

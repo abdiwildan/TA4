@@ -1,7 +1,13 @@
 <?php
 
-use App\Models\produk;
+use App\Models\Kategori;
+
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\produkController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ForgotpassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +22,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('login', [
-        "title" => "Home"
+        "title" => "Home",
     ]);
 });
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/forgotpass', [ForgotPassController::class, 'index']);
+
+
 Route::get('/cart', function () {
     return view('cart' ,[
         "title" => "Cart"
@@ -33,28 +45,15 @@ Route::get('/kategori', function () {
 
 
 
-Route::get('/produk', function () {
-    return view('produk', [
-        "title" => "Produk",
-        "category" => produk::all()
-    ]);
-});
+Route::get('/produk',[produkController::class,'index']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('produk/{slug}', [produkController::class,'show']);
 
-Route::get('/signup', function () {
-    return view('signup');
-});
-
-Route::get('/forgotpass', function () {
-    return view('forgotpass');
-});
 
 Route::get('/home', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "category" => Kategori::all()
     ]);
 });
 
@@ -62,4 +61,8 @@ Route::get('/checkout', function () {
     return view('checkout',[
         "title" => "CheckOut"
     ]);
+});
+
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
 });
