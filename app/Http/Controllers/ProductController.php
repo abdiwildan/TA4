@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kategori;
-use App\Http\Requests\StoreKategoriRequest;
-use App\Http\Requests\UpdateKategoriRequest;
+use App\Models\product;
+use App\Http\Requests\StoreproductRequest;
+use App\Http\Requests\UpdateproductRequest;
+use App\Policies\ProductPolicy;
 
-class KategoriController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
 
-    
-    public function index(){
+    public function index()
+    {
         return view('produk', [
             "title" => "Produk",
-            "produk" => Kategori::all()
+            "produk" => Product::all()
         ]);
     }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -32,7 +32,7 @@ class KategoriController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKategoriRequest $request)
+    public function store(StoreproductRequest $request)
     {
         //
     }
@@ -40,15 +40,18 @@ class KategoriController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Kategori $kategori)
+    public function show(product $product)
     {
-        
+        // return view('kategori', [
+        //     "title" => "Produk Pilihan",
+        //     "produk" => Product::find($slug)
+        // ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Kategori $kategori)
+    public function edit(product $product)
     {
         //
     }
@@ -56,7 +59,7 @@ class KategoriController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKategoriRequest $request, Kategori $kategori)
+    public function update(UpdateproductRequest $request, product $product)
     {
         //
     }
@@ -64,12 +67,8 @@ class KategoriController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kategori $kategori)
+    public function destroy(product $product)
     {
         //
-    }
-
-    public function show(){
-        $kategori = Kategori::all();
     }
 }

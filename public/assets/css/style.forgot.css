@@ -14,41 +14,39 @@ body{
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	height: 100%;
+	width: 100%;
 	z-index: -1;
 }
 
 .container{
-    max-width: 570px;
-    min-height: 550px;
     margin: 80px auto;
     padding: 40px 30px 30px 30px;
     background-color: #ecf0f3;
     border-radius: 15px;
-    box-shadow: 13px 13px 20px #2d2d2d, -13px -13px 20px #2d2d2d
+	width: fit-content;
+
+    
 }
 
-.img{
+/* .img{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
     
-}
+} */
 
 .login-content{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
-    padding-left: 80px;
-    padding-top: px;
 }
 
 
 
-form{
+/* form{
 	width: 360px;
-}
+} */
 
 .login-content img{
     height: 100px;
@@ -110,13 +108,13 @@ form{
 	transition: .4s;
 }
 
-.input-div:before{
+/* .input-div:before{
 	right: 50%;
 }
 
 .input-div:after{
 	left: 50%;
-}
+} */
 
 .input-div.focus:before, .input-div.focus:after{
 	width: 50%;
@@ -158,7 +156,7 @@ form{
 	padding: 12px 24px;
 	width: 100%;
 	height: 50px;
-    background-color: purple;
+    background-color: purple !important;
     color: #fff;
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
@@ -169,11 +167,10 @@ form{
 	text-decoration: none; 
     border-radius: 25px;
     box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
-    letter-spacing: 1.3px
 }
 
 .btn:hover {
-    background-color: #feffff;
+    background-color: #fef !important;
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
 	text-align: center;

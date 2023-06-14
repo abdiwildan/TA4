@@ -8,6 +8,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\produkController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ForgotpassController;
+use App\Http\Controllers\ProductController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +23,15 @@ use App\Http\Controllers\ForgotpassController;
 */
 
 Route::get('/', function () {
-    return view('login', [
+    return view('home', [
         "title" => "Home",
+        "category" => Category::all()
     ]);
 });
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/forgotpass', [ForgotPassController::class, 'index']);
 
 
@@ -45,15 +49,15 @@ Route::get('/kategori', function () {
 
 
 
-Route::get('/produk',[produkController::class,'index']);
+Route::get('/produk',[ProductController::class,'index']);
 
-Route::get('produk/{slug}', [produkController::class,'show']);
+Route::get('produk/{slug}', [ProductController::class,'show']);
 
 
 Route::get('/home', function () {
     return view('home', [
         "title" => "Home",
-        "category" => Kategori::all()
+        "category" => Category::all()
     ]);
 });
 

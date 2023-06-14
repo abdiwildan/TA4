@@ -31,7 +31,7 @@
           <a href="produk/{{ $categories->slug }}">
             <img src="assets/img/{{ $categories->img }}" alt="Avatar" style="width:100%">
             <div class="container1">
-              <h5><b>{{ $categories->nama_kategori }}</b></h5> 
+              <h5><b>{{ $categories->name_category }}</b></h5> 
             </div>
           </a>
         </div>

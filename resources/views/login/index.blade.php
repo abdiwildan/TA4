@@ -16,6 +16,14 @@
 		</div>
 		<div class="login-content">
 			<form action="index.html">
+				
+				@if (session()->has('success'))
+				  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+					{{ session('success') }}
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				  </div>
+				@endif
+
 				<img src="assets/img/icon tokopaedi.svg">
 				<h2 class="title"> Please Login </h2>
            		<div class="input-div one">
