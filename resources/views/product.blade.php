@@ -1,25 +1,22 @@
-
-@extends('layout.frontend')
+@extends('layouts/frontend')
 @section('content')
 <main>
-    {{-- <div class="cssCategory"> --}}
         <div class="cssCategory2">
           <h2 class="border-bottom text-center font-weight-bold" style="font-weight:bold">
-            Kategori
+            {{ $category }}
           </h2>
           <div class="card-group text-center">
-            @foreach ($produk as $pro)
+            @foreach ($products as $pro)
             <div class="card1">
-              <img src="assets/img/{{ $pro->img }}" style="width:100%">
+              <img src="/assets/img/{{ $pro->img }}" style="width:100%">
               <div class="container1">
-                <h5><b>{{ $pro->nama_produk }}</b></h5> 
-                <p>{{ $pro->harga }}</p>
+                <h5><b>{{ $pro->name_product }}</b></h5> 
+                <p>{{ $pro->price }}</p>
               </div>
             </div>
             @endforeach
           </div>
         </div>
-    {{-- </div> --}}
-    
 </main>
+
 @endsection 

@@ -5,7 +5,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navbar brand -->
             <a class="navbar-brand " href="/home" >
-                <img src="assets/img/icon tokopaedi.svg" 
+                <img src="{{ url('assets/img/icon tokopaedi.svg') }}" 
                 alt="Logo Tokopaedi" 
                 width="50" height="60" 
                 >

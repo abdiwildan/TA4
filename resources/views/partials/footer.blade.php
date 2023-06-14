@@ -4,11 +4,11 @@
 			<div class="col-lg-4 col-sm-6">
 				<div class="footer-widget about-widget">
 					<h2>Metode Pembayaran</h2>
-					<img src="assets/img/icon_bayar.png" class="image-foot">
+					<img src="{{ url('assets/img/icon_bayar.png') }}" class="image-foot">
 				</div>
 				<div class="footer-widget about-widget">
 					<h2>Jasa Pengiriman</h2>
-					<img src="assets/img/jasakirim.png" class="image-foot">
+					<img src="{{ url('assets/img/jasakirim.png') }}" class="image-foot">
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-6 align-self-center">
@@ -28,19 +28,19 @@
 				<div class="footer-widget contact-widget">
 					<h2>Ikuti Kami</h2>
 					<div class="con-info">
-						<span><img src="assets/img/sosmed1.png" alt="" id="img-sosmed"></span>
+						<span><img src="{{ url('assets/img/sosmed1.png') }}" alt="" id="img-sosmed"></span>
 						<p>@tokopaedi_official</p>
 					</div>
 					<div class="con-info">
-						<span><img src="assets/img/sosmed2.png" alt="" id="img-sosmed"></span>
+						<span><img src="{{ url('assets/img/sosmed2.png') }}" alt="" id="img-sosmed"></span>
 						<p>@Tokopaedi Official Store</p>
 					</div>
 					<div class="con-info">
-						<span><img src="assets/img/sosmed3.png" alt="" id="img-sosmed"></span>
+						<span><img src="{{ url('assets/img/sosmed3.png') }}" alt="" id="img-sosmed"></span>
 						<p>@tokopaedi_official</p>
 					</div>
 					<div class="con-info">
-						<span><img src="assets/img/sosmed4.png" alt="" id="img-sosmed"></span>
+						<span><img src="{{ url('assets/img/sosmed4.png') }}" alt="" id="img-sosmed"></span>
 						<p>@tokopaedi_official</p>
 					</div>
 				</div>

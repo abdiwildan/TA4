@@ -1,4 +1,4 @@
-@extends('layout.frontend')
+@extends('layouts\frontend')
 @section('content')
 <main >
   <!-- Carousel / Slider -->
@@ -28,7 +28,7 @@
 
         @foreach ($category as $categories)
         <div class="card1">
-          <a href="produk/{{ $categories->slug }}">
+          <a href="categories/{{ $categories->slug }}">
             <img src="assets/img/{{ $categories->img }}" alt="Avatar" style="width:100%">
             <div class="container1">
               <h5><b>{{ $categories->name_category }}</b></h5> 
@@ -80,7 +80,7 @@
     <div class="cssCategory2">
       <div class="row border-bottom ">
         <h5 class="col"><b>New Produk</b></h5>
-        <a href="/produk" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
+        <a href="/product" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
       </div>
       <div class="card-group text-center">
         <div class="card1">

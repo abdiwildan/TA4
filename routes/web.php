@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 
 
@@ -52,9 +53,8 @@ Route::get('/kategori', function () {
 
 
 
-Route::get('/produk',[ProductController::class,'index']);
+Route::get('/product',[ProductController::class,'index']);
 
-Route::get('produk/{slug}', [ProductController::class,'show']);
 
 
 Route::get('/home', function () {
@@ -71,3 +71,17 @@ Route::get('/checkout', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
+
+
+
+Route::get('categories/{slug}',[CategoryController::class,'show']);
+
+// Route::get('categories/{slug}',function(Category $category){
+//     return view('product',[
+//         'title' => $category->name_category,
+//         'products'=> $category->product,
+//         'category'=>$category->name_category,
+//     ]);
+// });
+
+Route::resource('productcustom', 'Web\Product');

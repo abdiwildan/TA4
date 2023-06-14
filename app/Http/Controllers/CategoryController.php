@@ -40,7 +40,12 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return view('product',
+        [
+        'title' => $category->name_category,
+        'products'=> $category->product,
+        'category'=>$category->name_category,
+        ]);
     }
 
     /**
