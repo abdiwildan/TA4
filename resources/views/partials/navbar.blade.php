@@ -26,79 +26,58 @@
         <!-- Search Element-->
 
         <!-- Right elements -->
-        <div class="d-flex align-items-center">
-          <div class="notification_wrap">
-            <div class="notification_icon">
-              <i class="fa-solid fa-bell" style="cursor: pointer"></i>
-            </div>
-            <div class="cosdropdown">
-              <div class="notify_item">
-                <div class="notify_img">
-                  <img src="assets/img/foto Profil.jpeg" alt="" class="img-fluid rounded-circle" width="20" height="20">
+        <ul class="navbar-nav ms-auto" >
+        @auth
+          <li class="nav-item dropdown">
+            <i class="fa-solid fa-bell m-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" style="cursor: pointer"></i>
+            <ul class="dropdown-menu" style="transform:translate(-60%,5%)">
+              <li class="dropdown-item" style="border-bottom: inset; ">
+                <a href="#" class="d-flex gap-3 py-3" aria-current="true">
+                <img src="assets/img/icon tokopaedi.svg" alt="twbs" width="10" height="32" class=" flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">List group item heading</h6>
+                    <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">now</small>
                 </div>
-                <div class="notify_info">
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p> 
-                  <span class="notify_time"> 10 menit lau</span>
-                </div>
-              </div>
-              <div class="notify_item">
-                <div class="notify_img">
-                  <img src="assets/img/foto Profil.jpeg" alt="" class="img-fluid rounded-circle" width="20" height="20">
-                </div>
-                <div class="notify_info">
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p> 
-                  <span class="notify_time"> 10 menit lau</span>
-                </div>
-              </div>
-              <div class="notify_item">
-                <div class="notify_img">
-                  <img src="assets/img/foto Profil.jpeg" alt="" class="img-fluid rounded-circle" width="20" height="20">
-                </div>
-                <div class="notify_info">
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p> 
-                  <span class="notify_time"> 10 menit lau</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Cart -->
-          <a class="text-reset me-3" href="/cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-    
-          <!-- Avatar -->
-          <div class="dropdown">
-            <a
-              class=" d-flex align-items-center"
-              href=""
-              id="navbarDropdownMenuAvatar"
-              role="button"
-              data-mdb-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="assets/img/foto Profil.jpeg"
-                class="rounded-circle"
-                height="25"
-              />
-            </a>
-            <ul
-              class="dropdown-menu"
-            >
-              <li>
-                <a class="dropdown-item" href="#">My profile</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Settings</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Logout</a>
-              </li>
+              </a>
+            </li>
+              <li class="dropdown-item">B</li>
+              <li class="dropdown-item">X</li>
             </ul>
-          </div>
+          </li>
+          <li class="nav-item m-2">
+            <a class="" href="/cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <img type="button"
+                src="assets/img/foto Profil.jpeg"
+                class="rounded-circle mx-2 dropdown-toggle" data-bs-toggle="dropdown" style="height: 2rem; cursor:pointer"
+              />
+              <ul class="dropdown-menu" style="transform:translate(-60%,5%)">
+                <li class="dropdown-item"><a href="/dashboard">Dashboard</li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>
+                      Logout</button>
+                  </form>
+                </li>
+              </ul>
+          </li>
+        @else
 
-        </div>
+          <li class="nav-item">
+            <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Login </a>
+          </li>
+
+        @endauth
+        </ul>
+        
         <!-- Right elements -->  
     </div>
     <!-- Container wrapper -->

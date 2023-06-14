@@ -84,15 +84,12 @@
       </div>
       <div class="card-group text-center">
         <div class="card1">
-          <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
+          <img src="assets/img/kategori1.png" alt="Avatar" style="width:75%">
           <div class="container1">
-            <h4><b>Sembako</b></h4> 
-          </div>
-        </div>
-        <div class="card1">
-          <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
-          <div class="container1">
-            <h4><b>Sembako</b></h4> 
+            <h5><b>Sembako</b></h5> 
+            <div class="text-center"> 
+              <a href="" class="btn btn-primary rounded-pill m-1 px-5">Beli</a>
+            </div>
           </div>
         </div>
       </div>
@@ -106,17 +103,26 @@
       <h5 class="col"><b>Produk Terlaris</b></h5>
       <a href="/produk" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
     </div>
-      <div class="card-group text-center">
-        <div class="card1">
-          <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
-          <div class="container1 ">
-            <h4 class=""><b>Sembako</b></h4> 
-          </div>
-        </div>
-        <div class="card1">
-          <img src="assets/img/kategori1.png" alt="Avatar" style="width:100%">
-          <div class="container1">
-            <h4><b>Sembako</b></h4> 
+      <div class="card-group">
+        <div class="card1 text-center">
+          <img src="assets/img/kategori1.png"  style="width:75%">
+          <div class="container1 text-start">
+            <p>Minyak <br>
+            <b>Rp. 48.500</b></p>
+            <div class="row">
+              <div class="col border-end">
+                <i class="bi bi-star-fill" style="color: #F79327"></i>
+                4.4
+              </div>
+              <div class="col">
+                Terjual 220
+              </div>
+            </div>
+            <div class="text-center"> 
+              <button type="submit" name="tambah_keranjang" value="minyak">
+              <a href="" class="btn btn-primary rounded-pill m-1 px-5">Beli</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
