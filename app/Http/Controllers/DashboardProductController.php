@@ -79,7 +79,8 @@ class DashboardProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        return $product;
+        Product::destroy($product->id);
+        return redirect('/dashboard/products')->with('success', 'Product has been deleted');
     }
 
     public function checkSlug(Request $request){

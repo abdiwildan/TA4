@@ -77,7 +77,7 @@ Route::get('/checkout', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
-Route::resource('/dashboard/products/', DashboardProductController::class);
+Route::resource('/dashboard/products', DashboardProductController::class);
 
 
 Route::get('/dashboard/product/checkSlug', [DashboardProductController::class, 'checkSlug']);

@@ -34,15 +34,17 @@
             <td>{{ $item->price }}</td>
             <td>
                
-                <a href="/dashboard/products/{{ $item->id }}" class="badge bg-info">
+                <a href="/dashboard/products/{{ $item->slug }}" class="badge bg-info">
                     <i class="bi bi-eye-fill"></i>
                 </a>
                 <a href="" class="badge bg-warning">
                     <i class="bi bi-pencil-square"></i>
                 </a>
-                <a href="/dashboard/product/{{ $item->id }}" class="badge bg-danger">
-                    <i class="bi bi-trash-fill"></i>
-                </a>
+                <form action="/dashboard/products/{{ $item->slug }}" method="post" class="d-inline">
+                  @method('delete')
+                  @csrf
+                  <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><i class="bi bi-trash-fill"></i></button>
+                </form>
             </td>
             </td>
             </td>
