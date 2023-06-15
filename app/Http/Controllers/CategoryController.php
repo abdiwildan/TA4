@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use DB;
 
 class CategoryController extends Controller
 {
@@ -38,13 +39,18 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show($category)
     {
+        $categories = DB::table('categories')->where('slug', $category)->first();
+        $product = DB::table('products')->where('category_id', $categories->id)->get();
+        //print_r($product);
+
         return view('product',
         [
-        'title' => $category,
-        'products'=> $category->product,
-        'category'=>$category->name_category,
+        'title' => $categories->name_category,
+        'products'=> $product,
+        'category'=>Category::all(),
+
         ]);
     }
 

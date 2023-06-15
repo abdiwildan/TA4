@@ -24,11 +24,11 @@
         Kategori
       </h2>
 
-      <div class="card-group text-center">
+      <div class="card-group text-center text-reset">
 
         @foreach ($category as $categories)
-        <div class="card1">
-          <a href="categories/{{ $categories->slug }}">
+        <div class="card1 text-reset">
+          <a href="categories/{{ $categories->slug }}" class="text-reset">
             <img src="assets/img/{{ $categories->img }}" alt="Avatar" style="width:100%">
             <div class="container1">
               <h5><b>{{ $categories->name_category }}</b></h5> 
@@ -83,15 +83,17 @@
         <a href="/product" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
       </div>
       <div class="card-group text-center">
+        @foreach ($products as $item)
         <div class="card1">
           <img src="assets/img/kategori1.png" alt="Avatar" style="width:75%">
           <div class="container1">
-            <h5><b>Sembako</b></h5> 
+            <h5><b>{{ $item->name_product }}</b></h5> 
             <div class="text-center"> 
               <a href="" class="btn btn-primary rounded-pill m-1 px-5">Beli</a>
             </div>
           </div>
         </div>
+        @endforeach
       </div>
     </div>
   </div>

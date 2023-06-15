@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\DashboardController;
+use App\Models\Product;
+use App\Models\Category;
 
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\ForgotpassController;
 use App\Http\Controllers\ProductController;
-use App\Models\Category;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardProductController;
+use App\Http\Controllers\ForgotpassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,8 @@ use App\Models\Category;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "category" => Category::all()
+        "category" => Category::all(),
+        "products" =>Product::latest()
     ]);
 });
 
@@ -53,6 +56,8 @@ Route::get('/kategori', function () {
 
 
 
+
+
 Route::get('/product',[ProductController::class,'index']);
 
 
@@ -60,7 +65,8 @@ Route::get('/product',[ProductController::class,'index']);
 Route::get('/home', function () {
     return view('home', [
         "title" => "Home",
-        "category" => Category::all()
+        "category" => Category::all(),
+        // "products" =>Product::latest()->first()
     ]);
 });
 
@@ -71,17 +77,12 @@ Route::get('/checkout', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
+Route::resource('/dashboard/products/', DashboardProductController::class);
+
+
+Route::get('/dashboard/product/checkSlug', [DashboardProductController::class, 'checkSlug']);
+
+Route::get('categories/{slug}',[CategoryController::class,'show'])->middleware('auth');
 
 
 
-Route::get('categories/{slug}',[CategoryController::class,'show']);
-
-// Route::get('categories/{slug}',function(Category $category){
-//     return view('product',[
-//         'title' => $category->name_category,
-//         'products'=> $category->product,
-//         'category'=>$category->name_category,
-//     ]);
-// });
-
-Route::resource('productcustom', 'Web\Product');

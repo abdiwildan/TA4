@@ -33,7 +33,7 @@
             <ul class="dropdown-menu" style="transform:translate(-60%,5%)">
               <li class="dropdown-item" style="border-bottom: inset; ">
                 <a href="#" class="d-flex gap-3 py-3" aria-current="true">
-                <img src="assets/img/icon tokopaedi.svg" alt="twbs" width="10" height="32" class=" flex-shrink-0">
+                <img src="{{ url('assets/img/icon tokopaedi.svg') }}" alt="twbs" width="10" height="32" class=" flex-shrink-0">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                   <div>
                     <h6 class="mb-0">Promo</h6>
@@ -47,18 +47,18 @@
             </ul>
           </li>
           <li class="nav-item m-2">
-            <a class="" href="/cart">
+            <a class="text-reset" href="/cart">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </li>
           <li class="nav-item dropdown">
             <img type="button"
-                src="assets/img/foto Profil.jpeg"
+                src="{{ url('assets/img/foto Profil.jpeg') }}"
                 class="rounded-circle mx-2 dropdown-toggle" data-bs-toggle="dropdown" style="height: 2rem; cursor:pointer"
               />
               <ul class="dropdown-menu" style="transform:translate(-60%,5%)">
                 <li class="dropdown-item"><a href="/dashboard">Dashboard</li>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider"></li></a>
                 <li>
                   <form action="/logout" method="post">
                     @csrf
