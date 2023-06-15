@@ -36,15 +36,14 @@
                 <img src="assets/img/icon tokopaedi.svg" alt="twbs" width="10" height="32" class=" flex-shrink-0">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                   <div>
-                    <h6 class="mb-0">List group item heading</h6>
-                    <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                    <h6 class="mb-0">Promo</h6>
+                    <p class="mb-0 opacity-75">Buruan klaim Kupon cashback Rp. 500rb</p>
                   </div>
                   <small class="opacity-50 text-nowrap">now</small>
                 </div>
               </a>
             </li>
-              <li class="dropdown-item">B</li>
-              <li class="dropdown-item">X</li>
+
             </ul>
           </li>
           <li class="nav-item m-2">
