@@ -4,7 +4,7 @@
         <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navbar brand -->
-            <a class="navbar-brand " href="/home" >
+            <a class="navbar-brand " href="/" >
                 <img src="{{ url('assets/img/icon tokopaedi.svg') }}" 
                 alt="Logo Tokopaedi" 
                 width="50" height="60" 
@@ -16,11 +16,11 @@
         
         <!-- Search Element-->
         <div class="d-flex">
-            <form class="d-flex input-group-sm search   translate-middle-x " role="search">
-            <span class="input-group-text iconsearch">
+            <form class="d-flex input-group-sm search   translate-middle-x " role="search" action="/product">
+            <span class="input-group-text iconsearch" type="submit" >
               <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #fafafa;"></i>
             </span>
-            <input class="form-control searchcos"  type="search" placeholder="Cari Produk" aria-label="Search">
+            <input class="form-control searchcos"  type="search" placeholder="Cari Produk" name="search">
           </form>
         </div>
         <!-- Search Element-->

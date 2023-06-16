@@ -9,7 +9,7 @@
           <div class="card-group text-center text-reset">
             @foreach ($products as $pro)
             <div class="card1 text-reset">
-              <img src="/assets/img/produk/{{ $pro->slug }}.png" style="width:100%">
+              {{-- <img src="{{ assets('storage/' . $product->image) }}" style="width:100%"> --}}
               <div class="container1">
                 <h5><b>{{ $pro->name_product }}</b></h5> 
                 <p>{{ $pro->price }}</p>

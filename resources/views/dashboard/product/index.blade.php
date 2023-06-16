@@ -6,7 +6,7 @@
     <h1 class="h2">Product</h1>
   </div>
   @if (session()->has('success'))
-  <div class="alert alert-success" role="alert">
+  <div class="alert alert-success col-lg-8" role="alert">
     {{ session('success') }}
   </div>
   @endif
@@ -37,7 +37,7 @@
                 <a href="/dashboard/products/{{ $item->slug }}" class="badge bg-info">
                     <i class="bi bi-eye-fill"></i>
                 </a>
-                <a href="" class="badge bg-warning">
+                <a href="/dashboard/products/{{ $item->slug }}/edit" class="badge bg-warning">
                     <i class="bi bi-pencil-square"></i>
                 </a>
                 <form action="/dashboard/products/{{ $item->slug }}" method="post" class="d-inline">

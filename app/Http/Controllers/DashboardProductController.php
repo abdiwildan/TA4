@@ -38,13 +38,16 @@ class DashboardProductController extends Controller
     {
         $validatedData = $request ->validate([
             "name_product" => ['required', 'max:255'],
-            // 'slug' => 'required|unique:post',
+            'slug' => 'required|unique:products',
             'category_id' => 'required',
-            'price' => 'required'
+            'price' => 'required',
+            'image' => 'image|required|file|max:1024'
         ]);
 
+        $validatedData['image']= $request->file('image')->store('product-images');
+
         Product::create($validatedData);
-        return redirect('/dashboard/products')->with('success', 'New Product Success');
+        return redirect('/dashboard/products')->with('success', 'New Product has been added');
     }
 
     /**
@@ -63,7 +66,10 @@ class DashboardProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('dashboard.product.edit',[
+            'product' => $product,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -71,7 +77,22 @@ class DashboardProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        return $product;
+        $rules = [
+            "name_product" => ['required', 'max:255'],
+            'category_id' => 'required',
+            'price' => 'required'
+        ];
+
+        if($request->slug != $product->slug){
+            $rules['slug'] = 'required|unique:products';
+        }
+
+        $validatedData = $request ->validate($rules);
+
+        Product::where('id',  $product->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/products')->with('success', 'Product has been updated');
     }
 
     /**
