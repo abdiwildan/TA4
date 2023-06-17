@@ -17,10 +17,10 @@
         <!-- Search Element-->
         <div class="d-flex">
             <form class="d-flex input-group-sm search   translate-middle-x " role="search" action="/product">
-            <span class="input-group-text iconsearch" type="submit" >
-              <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #fafafa;"></i>
-            </span>
-            <input class="form-control searchcos"  type="search" placeholder="Cari Produk" name="search">
+              <span class="input-group-text iconsearch" type="submit" >
+                <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #fafafa;"></i>
+              </span>
+              <input class="form-control searchcos"  type="search" placeholder="Cari Produk" name="search">
           </form>
         </div>
         <!-- Search Element-->
@@ -32,7 +32,7 @@
             <i class="fa-solid fa-bell m-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" style="cursor: pointer"></i>
             <ul class="dropdown-menu" style="transform:translate(-60%,5%)">
               <li class="dropdown-item" style="border-bottom: inset; ">
-                <a href="#" class="d-flex gap-3 py-3" aria-current="true">
+                <a href="#" class="d-flex gap-3 py-3 text-decoration-none text-reset" aria-current="true">
                 <img src="{{ url('assets/img/icon tokopaedi.svg') }}" alt="twbs" width="10" height="32" class=" flex-shrink-0">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                   <div>

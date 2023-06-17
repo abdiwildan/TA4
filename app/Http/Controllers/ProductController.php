@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\product;
+use App\Models\Product;
 use App\Http\Requests\StoreproductRequest;
 use App\Http\Requests\UpdateproductRequest;
 use App\Policies\ProductPolicy;
@@ -13,18 +13,18 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
 
+
     public function index()
 
     {
         $products = Product::latest();
 
         if(request('search')){
-            $products->where('name_produck', 'like', '%' . request('serch').'%' );
+            $products->where('name_product', 'like', '%' . request('search').'%' );
         }
 
         return view('product', [
             "title" => "Product",
-            "products" => Product::all(),
             'product' => $products->get()
 
         ]);

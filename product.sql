@@ -1,0 +1,20 @@
+/*
+-- Query: SELECT * FROM tokopaedi.products
+-- Date: 2023-06-17 08:27
+*/
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (1,'2023-06-15 13:15:10','2023-06-15 13:15:10','Eveniet est.',1,'mollitia-perferendis-ullam-dolorem-numquam-mollitia-ducimus-eos',616662194,'Vel vitae earum.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (2,'2023-06-15 13:15:10','2023-06-15 13:15:10','Enim harum quia.',1,'distinctio-qui-veniam-possimus-temporibus',450374436,'Ab animi.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (3,'2023-06-15 13:15:10','2023-06-15 13:15:10','Ad officia.',1,'eos-est-amet-aperiam-eveniet',1032626287,'Autem laboriosam.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (4,'2023-06-15 13:15:10','2023-06-15 13:15:10','Facilis nihil.',1,'error-natus-vel-est',1347750249,'Est debitis sapiente.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (5,'2023-06-15 13:15:10','2023-06-15 13:15:10','Harum ullam quisquam.',1,'ut-magnam-occaecati-voluptatem-enim-minima-itaque',1026223312,'Omnis accusamus nisi.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (6,'2023-06-15 13:15:10','2023-06-15 13:15:10','Voluptatum sed quisquam.',1,'id-nam-error-laborum-in-voluptates',655526806,'Aut vel occaecati.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (7,'2023-06-15 13:15:10','2023-06-15 13:15:10','Minus porro.',1,'ratione-perferendis-eaque-esse-sit-et-nesciunt-nihil-fuga',1593843692,'Minima nobis.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (8,'2023-06-15 13:15:10','2023-06-15 13:15:10','Accusantium voluptatum.',1,'reprehenderit-pariatur-vel-vel-deleniti',1337548611,'Facere consequatur deleniti.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (9,'2023-06-15 13:15:10','2023-06-15 13:15:10','Maxime et.',1,'rem-sed-ex-non-voluptas',299023184,'Unde natus.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (10,'2023-06-15 13:15:10','2023-06-15 13:15:10','Deserunt eos sit.',1,'rem-et-voluptates-voluptate-ut-omnis',1271495808,'Tenetur odit magnam.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (11,'2023-06-15 13:15:10','2023-06-15 13:15:10','Occaecati veritatis a.',1,'ducimus-ad-corrupti-quae-voluptatibus-dolor-sit',1268060788,'Et dolorem doloribus.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (12,'2023-06-15 13:15:10','2023-06-15 13:15:10','Accusantium repellendus non.',1,'placeat-eum-omnis-dolores-dolor-consequatur-ut',2093907486,'Quo omnis.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (13,'2023-06-15 13:15:10','2023-06-15 13:15:10','Voluptas officia.',1,'id-nulla-nostrum-omnis-et-excepturi-eum-delectus',1580365117,'Molestias illum assumenda.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (14,'2023-06-15 13:15:10','2023-06-15 13:15:10','Sit magnam.',1,'eos-rerum-et-voluptate-vitae-accusamus-et',508468352,'Consectetur repellendus.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (15,'2023-06-15 13:15:10','2023-06-15 13:15:10','Est nisi.',1,'non-quia-nam-ut-consequatur-accusamus-beatae',1783651830,'Iure porro.');
+INSERT INTO `` (`id`,`created_at`,`updated_at`,`name_product`,`category_id`,`slug`,`price`,`image`) VALUES (16,'2023-06-16 02:30:58','2023-06-16 02:30:58','axekk',2,'axekk',890,'product-images/cBtpoCgIsAuI3wy2iDjhd8S0ST9ynKid74XjcGeI.jpg');
