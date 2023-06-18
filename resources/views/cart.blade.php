@@ -1,4 +1,4 @@
-@extends('layout.frontend')
+@extends('layouts.frontend')
 @section('content')
 <main>
     <div class="cart-wrap">
@@ -17,7 +17,7 @@
                                 <img src="assets/img/kategori1.png" alt="" style="width: 10rem;">
                             </div>
                             <div class="col p-2">
-                                <h4><b>Minyak Murah</b></h4>
+                                <h4><b>Mohon Maaf Fitur Masih Tahap Development</b></h4>
                                 <br>
                                 <h5><b> Rp. 9090</b></h5>
                             </div>

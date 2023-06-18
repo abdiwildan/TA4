@@ -6,14 +6,29 @@
           <h2 class="border-bottom text-center font-weight-bold" style="font-weight:bold">
             All Product
           </h2>
-          @if ($product->count()) 
+          @if ($products->count()) 
           <div class="card-group text-center text-reset">
-            @foreach ($product as $pro)
-            <div class="card1 text-reset">
-              {{-- <img src="{{ assets('storage/' . $product->image) }}" style="width:100%"> --}}
-              <div class="container1">
-                <h5><b>{{ $pro->name_product }}</b></h5> 
-                <p>{{ $pro->price }}</p>
+            @foreach ($products as $pro)
+            <div class="card1 text-center">
+              <img src="storage/{{ $pro->image }}"  style="width:75%">
+              <div class="container1 text-start">
+                <p>{{ $pro->name_product }}<br>
+                <b> Rp. {{ $pro->price }}</b></p>
+                <div class="row align-items-center" style="font-size: 12px">
+                  <div class="col border-end">
+                    <i class="bi bi-star-fill" style="color: #F79327"></i>
+                    4.4
+                  </div>
+                  <div class="col">
+                    Terjual 220
+                  </div>
+                </div>
+                <div class="text-center my-2" > 
+                  <form action="/cart" method="post">
+                    @csrf
+                    <button class="btn btn-primary rounded-pill border-0"><i class="bi bi-cart"></i> Beli</button>
+                  </form>
+                </div>
               </div>
             </div>
             @endforeach

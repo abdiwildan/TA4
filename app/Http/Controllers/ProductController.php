@@ -25,7 +25,7 @@ class ProductController extends Controller
 
         return view('product', [
             "title" => "Product",
-            'product' => $products->get()
+            'products' => $products->get()
 
         ]);
     }

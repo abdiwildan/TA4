@@ -5,26 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 
-class TokopaediController extends Controller
+class TransactionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
-        $rendang = DB::table('products')->where('name_product', 'like', '%' . 'adem'.'%' );
-        $products = DB::table('products')->latest()->simplePaginate(5);
-
-        return view('home', [
-                    "title" => "Home",
-                    "category" => Category::all(),
-                    "products" =>$products,
-                    // "discount" => $rendang
-                ]);
+        return view('cart',[
+            'products' => Product::all(),
+            'title'=>'Cart'
+        ]);
     }
 
     /**
@@ -32,7 +26,9 @@ class TokopaediController extends Controller
      */
     public function create()
     {
-        //
+        return view('cart',[
+            'Product' => Product::all()
+        ]);
     }
 
     /**
@@ -40,7 +36,10 @@ class TokopaediController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $new_product = DB::table('products')->where('slug', $request)->first();
+
+
     }
 
     /**

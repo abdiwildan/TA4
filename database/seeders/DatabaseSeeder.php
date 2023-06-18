@@ -29,7 +29,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'wildanabdilah54@gmail.com',
             'password' => bcrypt('password')
         ]);
-        User::factory(3)->create();
+
+        User::factory(3)->create([
+            'password' => bcrypt('password')
+        ]);
 
 
         Category::create([
@@ -62,6 +65,6 @@ class DatabaseSeeder extends Seeder
             'img' => 'kategori5.png'
         ]);
 
-        Product::factory(15)->create();
+        // Product::factory(15)->create();
     }
 }

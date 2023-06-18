@@ -53,6 +53,7 @@
           <img src="assets/img/indomie goreng.png" class="img-fluid p-5" >
         </div>
         <div class="col">
+          
           <h4> <b>Indomie Mi goreng <br> Rasa Rendang</b></h4>
           <h2 class="display-4  mb-0">
             <small class="align-top fw-normal"
@@ -66,7 +67,7 @@
                 Dus</small>
           </h2>
           <div class="text-center py-5"> 
-              <a href="" class="btn btn-primary rounded-pill px-5 ">Beli</a>
+              <a href="/cart" class="btn btn-primary rounded-pill px-5 ">Beli</a>
           </div>
         </div>
       </div>
@@ -85,7 +86,7 @@
       <div class="card-group text-center justify-content-center">
         @foreach ($products as $item)
         <div class="card1 text-center">
-          <img src="assets/img/kategori1.png"  style="width:75%">
+          <img src="storage/{{ $item->image }}"  style="width:75%">
           <div class="container1 text-start">
             <p>{{ $item->name_product }}<br>
             <b> Rp. {{ $item->price }}</b></p>
@@ -116,12 +117,12 @@
     <div class="cssCategory2">
       <div class="row border-bottom ">
       <h5 class="col"><b>Produk Terlaris</b></h5>
-      <a href="/produk" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
+      <a href="/product" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
     </div>
       <div class="card-group">
         @foreach ($products as $item)
         <div class="card1 text-center">
-          <img src="assets/img/kategori1.png"  style="width:75%">
+          <img src="storage/{{ $item->image }}"  style="width:75%">
           <div class="container1 text-start">
             <p>{{ $item->name_product }}<br>
             <b> Rp. {{ $item->price }}</b></p>
@@ -135,7 +136,7 @@
               </div>
             </div>
             <div class="text-center my-2" > 
-              <form action="/cart" method="post">
+              <form action="/cart/{{ $item->slug }}" method="post">
                 @csrf
                 <button class="btn btn-primary rounded-pill border-0"><i class="bi bi-cart"></i> Beli</button>
               </form>

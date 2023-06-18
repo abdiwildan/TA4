@@ -66,7 +66,7 @@
            		</div>
 					<button class="btn"> Register </button>
 				<div class="text-center fs-6"> 
-					<a href="/signup">Sing up</a> or <a href="/login">Sign in</a> 
+					<a href="/login" class="text-decoration-none">Sign in</a> 
 				</div>
             </form>
         </div>

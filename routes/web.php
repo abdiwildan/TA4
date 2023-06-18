@@ -13,6 +13,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\ForgotpassController;
 use App\Http\Controllers\TokopaediController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,17 +46,17 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/forgotpass', [ForgotPassController::class, 'index']);
 
 
-Route::get('/cart', function () {
-    return view('cart' ,[
-        "title" => "Cart"
-    ]);
-});
+// Route::get('/cart', function () {
+//     return view('cart' ,[
+//         "title" => "Cart"
+//     ]);
+// });
 
-Route::get('/kategori', function () {
-    return view('kategori' ,[
-        "title" => "Cart"
-    ]);
-});
+// Route::get('/kategori', function () {
+//     return view('kategori' ,[
+//         "title" => "Cart"
+//     ]);
+// });
 
 
 
@@ -65,23 +66,24 @@ Route::get('/product',[ProductController::class,'index']);
 
 
 
-Route::get('/home', function () {
-    return view('home', [
-        "title" => "Home",
-        "category" => Category::all(),
-        // "products" =>Product::latest()->first()
-    ]);
-});
-
+// Route::get('/home', function () {
+    //     return view('home', [
+        //         "title" => "Home",
+        //         "category" => Category::all(),
+        //         // "products" =>Product::latest()->first()
+        //     ]);
+        // });
+        
 Route::get('/checkout', function () {
     return view('checkout',[
         "title" => "CheckOut"
     ]);
 });
-
+        
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
 Route::resource('/dashboard/products', DashboardProductController::class);
-
+Route::resource('/cart',TransactionController::class);
+        
 
 Route::get('/dashboard/product/checkSlug', [DashboardProductController::class, 'checkSlug']);
 
