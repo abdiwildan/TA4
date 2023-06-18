@@ -27,8 +27,8 @@
       <div class="card-group text-center text-reset">
 
         @foreach ($category as $categories)
-        <div class="card1 text-reset">
-          <a href="categories/{{ $categories->slug }}" class="text-reset">
+        <div class="card1 text-reset ">
+          <a href="categories/{{ $categories->slug }}" class="text-reset text-decoration-none">
             <img src="assets/img/{{ $categories->img }}" alt="Avatar" style="width:100%">
             <div class="container1">
               <h5><b>{{ $categories->name_category }}</b></h5> 
@@ -82,14 +82,27 @@
         <h5 class="col"><b>New Produk</b></h5>
         <a href="/product" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
       </div>
-      <div class="card-group text-center">
+      <div class="card-group text-center justify-content-center">
         @foreach ($products as $item)
-        <div class="card1">
-          <img src="assets/img/kategori1.png" alt="Avatar" style="width:75%">
-          <div class="container1">
-            <h5><b>{{ $item->name_product }}</b></h5> 
-            <div class="text-center"> 
-              <a href="" class="btn btn-primary rounded-pill m-1 px-5">Beli</a>
+        <div class="card1 text-center">
+          <img src="assets/img/kategori1.png"  style="width:75%">
+          <div class="container1 text-start">
+            <p>{{ $item->name_product }}<br>
+            <b> Rp. {{ $item->price }}</b></p>
+            <div class="row align-items-center" style="font-size: 12px">
+              <div class="col border-end">
+                <i class="bi bi-star-fill" style="color: #F79327"></i>
+                4.4
+              </div>
+              <div class="col">
+                Terjual 220
+              </div>
+            </div>
+            <div class="text-center my-2" > 
+              <form action="/cart" method="post">
+                @csrf
+                <button class="btn btn-primary rounded-pill border-0"><i class="bi bi-cart"></i> Beli</button>
+              </form>
             </div>
           </div>
         </div>
@@ -106,12 +119,13 @@
       <a href="/produk" style="display: contents"><p class="col-2" >Lihat Semua</p></a>
     </div>
       <div class="card-group">
+        @foreach ($products as $item)
         <div class="card1 text-center">
           <img src="assets/img/kategori1.png"  style="width:75%">
           <div class="container1 text-start">
-            <p>Minyak <br>
-            <b>Rp. 48.500</b></p>
-            <div class="row">
+            <p>{{ $item->name_product }}<br>
+            <b> Rp. {{ $item->price }}</b></p>
+            <div class="row align-items-center" style="font-size: 12px">
               <div class="col border-end">
                 <i class="bi bi-star-fill" style="color: #F79327"></i>
                 4.4
@@ -120,13 +134,15 @@
                 Terjual 220
               </div>
             </div>
-            <div class="text-center"> 
-              <button type="submit" name="tambah_keranjang" value="minyak">
-              <a href="" class="btn btn-primary rounded-pill m-1 px-5">Beli</a>
-              </button>
+            <div class="text-center my-2" > 
+              <form action="/cart" method="post">
+                @csrf
+                <button class="btn btn-primary rounded-pill border-0"><i class="bi bi-cart"></i> Beli</button>
+              </form>
             </div>
           </div>
         </div>
+        @endforeach
       </div>
     </div>
   </div>

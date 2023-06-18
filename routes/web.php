@@ -12,6 +12,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\ForgotpassController;
+use App\Http\Controllers\TokopaediController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,15 @@ use App\Http\Controllers\ForgotpassController;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home",
-        "category" => Category::all(),
-        "products" =>Product::latest()
-    ]);
-});
+Route::resource('/', TokopaediController::class);
+
+// Route::get('/', function () {
+//     return view('home', [
+//         "title" => "Home",
+//         "category" => Category::all(),
+//         "products" =>Product::latest()
+//     ]);
+// });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
